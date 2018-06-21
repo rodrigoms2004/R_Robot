@@ -1,0 +1,14 @@
+{
+    "mysql_conn" : {
+        "username" : "radius_user",
+        "password" : "radiuspass",
+        "db_name"  : "radius_db",
+        "server"   : "172.16.105.153"
+    },
+    "mssql_conn" : {
+        "username" : "sa",
+        "password" : "Cisco2018",
+        "db_name"  : "",
+        "server"   : "SQLServerDSN"        
+    }
+}

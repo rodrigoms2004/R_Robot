@@ -1,0 +1,12 @@
+R_Tutorial
+
+# exclude everything inside folder
+ftp/in_files/*
+!ftp/in_files/.gitkeep
+
+ftp/result/*
+!ftp/result/.gitkeep
+
+# but keep folder
+
+

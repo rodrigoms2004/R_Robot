@@ -1,0 +1,8 @@
+{
+    "conn" : {
+        "username" : "sa",
+        "password" : "Cisco2018",
+        "db_name"  : "",
+        "server"   : "SQLServerDSN"        
+    }
+}

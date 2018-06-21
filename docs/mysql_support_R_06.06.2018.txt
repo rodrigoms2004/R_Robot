@@ -1,0 +1,30 @@
+
+####################################################################
+# UBUNTU 14.04
+sudo apt-get install libmariadbclient-dev libmariadb-client-lgpl-dev
+
+####################################################################
+# UBUNTU 16.04
+sudo apt-get install libmariadbd-dev libmariadb-client-lgpl-dev 
+
+####################################################################
+# install drive
+R
+install.packages("RMySQL")
+
+
+####################################################################
+# testing it
+
+library("RMySQL")
+# Create a connection Object to MySQL database.
+# We will connect to the sampel database named "sakila" that comes with MySql installation.
+mysqlconnection = dbConnect(MySQL(), user = 'radius_user', password = 'radiuspass', dbname = 'radius_db',
+   host = '172.16.105.153')
+
+# List the tables available in this database.
+ dbListTables(mysqlconnection)
+
+
+
+

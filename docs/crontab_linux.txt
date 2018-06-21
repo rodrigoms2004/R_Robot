@@ -1,0 +1,11 @@
+chmod +x first_script.R
+chmod +x second_script.R
+
+FOR UBUNTU 16.04
+
+crontab -e
+
+* * * * * cd /home/ubuntu/scripts/R_language_robots/ && /usr/lib/R/bin/Rscript first_script.R
+* * * * * cd /home/ubuntu/scripts/R_language_robots/ && /usr/lib/R/bin/Rscript second_script.R
+
+*/5 * * * * ping -c 2 -s 1 -W 2 172.16.105.157

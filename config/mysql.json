@@ -1,0 +1,8 @@
+{
+    "conn" : {
+        "username" : "radius_user",
+        "password" : "radiuspass",
+        "db_name"  : "radius_db",
+        "server"   : "172.16.105.153"
+    }
+}
