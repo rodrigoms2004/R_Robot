@@ -15,15 +15,14 @@ main = function() {
 
 	mysqlconnection = getMySQLConn()
 	result = dbSendQuery(mysqlconnection, sql_query)
-
+    
 	if (dbIsValid(result)) {
-		#print ("SQL-OK")
+		print ("SQL-OK")
 	} else {
-		#print (paste("SQL-ERROR:", result, sep=""))
+		print (paste("SQL-ERROR:", result, sep=""))
 	}
 
-    data <- dbFetch(result)
-
+    data <- dbFetch(result, n = -1)
 
     for (row in 1:nrow(data)) {
 
@@ -31,8 +30,10 @@ main = function() {
         sql_query <- (paste("select * from TB_PARQUE_MOVEL_ATUAL where COD_cli = ", cod_cli, sep="")) 
         result = dbSendQuery(mysqlconnection, sql_query)
 
-        data_tb <- dbFetch(result)
-        
+        data_tb <- dbFetch(result, n = -1)
+        # print(nrow(data_tb))
+        print(sql_query)
+
         if(nrow(data_tb) != 0) {
 
             generateCSV(
