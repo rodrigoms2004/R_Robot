@@ -41,9 +41,3 @@ generateCSV = function(cod_cli, rawdata, maxNumberOfRows) {
         }   # end while
 
 }
-
-
-# Error Code: 1055. Expression #1 of SELECT list is not in GROUP BY clause 
-# and contains nonaggregated column 'planta_cliente.TB_PARQUE_MOVEL_ATUAL.ID_MES' 
-# which is not functionally dependent on columns in GROUP BY clause; 
-# this is incompatible with sql_mode=only_full_group_by
